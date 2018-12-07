@@ -3,7 +3,7 @@ import './Footer.scss';
 
 function Footer(props) {
 	return(
-		<footer>Data provided by Marvel. © 2014 Marvel</footer>
+		<footer className="Footer__Component">Data provided by Marvel. © 2014 Marvel</footer>
 		);
 };
 
