@@ -25,75 +25,9 @@ img {
   width: 100%;
 }
 
-.Header__Component {
-  header {
-    background-color: #f01716;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    position: fixed;
-    box-sizing: border-box;
-    height: 50px;
-    top: 0;
-    width: 100%;
-    padding: 0 50px;
 
-    p {
-        font-size: 18px;
-        font-style: italic;
-    }
 
-    h1 {
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: -2.2px;
-        font-size: 35px;
-    }
-  }
 
-  .visually-hidden:not(:focus):not(:active) {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
-  }
-}
-
-.Footer__Component {
-  footer {
-    font-family: 'Lato', sans-serif;
-    width: 100%;
-    background-color: #000;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    font-weight: 700;
-  }
-
-  @media (max-width: 812px) {
-    header {
-      flex-direction: column;
-      padding: 0 25px;
-
-      p {
-        margin-top: 0;
-      }
-    }
-  }
-}
 
 .CharacterList__Component {
     margin-bottom: 50px;
