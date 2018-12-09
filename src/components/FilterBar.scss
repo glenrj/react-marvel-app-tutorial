@@ -1,0 +1,54 @@
+.FilterBar__Component {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    background-color: #c70f0e;
+    min-height: 45px;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+
+    input[type=text] {
+        font-family: 'Lato', sans-serif;
+        border: none;
+        border-radius: none;
+        margin-left: 10px;
+        height: 29px;
+        width: 250px;
+        font-size: 15px;
+        padding-left: 10px;
+        color: #000;
+
+        &::placeholder {
+            font-size: 15px;
+            font-style: italic;
+            color: #285e64;
+        }
+    }
+
+    button {
+        height: 31.5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 0;
+        font-size: 15px;
+        color: white;
+        background-color: #000;
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+}
+
+@media (max-width: 812px) {
+    .FilterBar__Component {
+        top: 100px;
+        justify-content: center;
+        padding: 0;
+    }
+}
