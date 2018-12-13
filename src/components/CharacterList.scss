@@ -1,0 +1,54 @@
+.CharacterList__Component {
+    margin-bottom: 50px;
+    padding: 100px 50px 20px 50px;
+
+    button {
+        height: 31.5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 1px;
+        font-size: 15px;
+        color: white;
+        padding: 0px 12px;
+        background-color: #000;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+
+    .character-list  {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        overflow-y: scroll;
+        height: 420px;
+        border: 5px solid #888;
+    }
+
+    .character-card {
+        padding: 15px;
+        margin: 20px;
+        background-color: #d8d8d8;
+    }
+
+    @media (max-width: 850px) {
+        .character-list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .character-list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .character-list  {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
