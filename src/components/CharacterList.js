@@ -7,7 +7,7 @@ class CharacterList extends Component {
     super(props);
 
     this.state = {
-      characters: [],
+      characters: []
     }
   }
 
@@ -34,7 +34,13 @@ class CharacterList extends Component {
   }
 
   renderCharacters() {
-    return (<div className="character-list">Placeholder for character list</div>);
+    const characterList = this.state.characters.map((character, index) => {
+      return (<div className="character-card" key={`${character.id}-${index}`}>
+        <img alt="" src={`${character.thumbnail.path}.${character.thumbnail.extension}`}/>
+        <p>{character.name}</p>
+      </div>);
+    });
+    return (<div className="character-list">{characterList}</div>);
   }
 
   renderEmptyState() {
