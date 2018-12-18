@@ -11,7 +11,9 @@ class App extends Component {
   }
 
   onFilterSubmit = (searchQuery) => {
-    console.log(searchQuery);
+    this.setState({
+      searchQuery: searchQuery
+    });
   }
 
   render() {
@@ -22,7 +24,7 @@ class App extends Component {
           message="Search and explore your favourite Marvel characters!"
           onFilterSubmit={this.onFilterSubmit}
         />
-        <CharacterList />
+        <CharacterList searchQuery={this.state.searchQuery} />
         <Footer />
       </div>
     );
