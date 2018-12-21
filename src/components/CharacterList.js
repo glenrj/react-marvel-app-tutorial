@@ -28,7 +28,7 @@ class CharacterList extends Component {
     try {
       const charactersData = await axios.get("https://gateway.marvel.com/v1/public/characters", {
         params: {
-          apikey: "6a9e903790k74f30d48", // Use your API key here
+          apikey: "c073ec6c21c6e6293fd4ac1e6d01968a", // Use your API key here
           limit: 50,
           nameStartsWith: this.props.searchQuery ? this.props.searchQuery : null
         }
@@ -45,7 +45,11 @@ class CharacterList extends Component {
 
   renderCharacters() {
     const characterList = this.state.characters.map((character, index) => {
-      return (<div className="character-card" key={`${character.id}-${index}`}>
+      return (<div
+      	className="character-card"
+      	key={`${character.id}-${index}`}
+      	onClick={() => this.props.onSelectedCharacterChange(character.id)} //look at On Filter Submit in FilterBar.js to see another way to write
+      	>
         <img alt="" src={`${character.thumbnail.path}.${character.thumbnail.extension}`}/>
         <p>{character.name}</p>
       </div>);
